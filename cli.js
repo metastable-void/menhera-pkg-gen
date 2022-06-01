@@ -86,8 +86,15 @@ fs.readFile(template_path, {
     blob.sha256 = digest;
     blob.source = digest;
     await fs.writeFile(digest, buffer);
+    console.log('blob: ', digest);
     index.blobs[key] = blob;
   }
   const json = JSON.stringify(index);
-  await fs.writeFile('./index.json', json, 'utf-8');
+  const json_buffer = Buffer.from(json, 'utf-8');
+  const json_hash = crypto.createHash('sha256');
+  json_hash.update(json_buffer);
+  const json_digest = json_hash.digest('hex').toLowerCase();
+  const index_path = `./${json_digest}.json`;
+  await fs.writeFile(index_path, json_buffer);
+  console.log('written: ', index_path);
 });
