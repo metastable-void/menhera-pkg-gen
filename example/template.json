@@ -1,0 +1,7 @@
+{
+  "mpkg-template": 1,
+  "id": "mpkg-example@menhera.org",
+  "files": {
+    "test.js": "./test.js"
+  }
+}
