@@ -1,5 +1,5 @@
 {
-  "name": "@menhera/pkg-gen",
+  "name": "menhera-pkg-gen",
   "version": "1.0.0",
   "description": "Menhera Package generator",
   "main": "index.js",
