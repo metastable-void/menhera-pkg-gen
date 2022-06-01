@@ -85,7 +85,7 @@ fs.readFile(template_path, {
     blob.sha256 = digest;
     blob.url = `data:${type};base64,${buffer.toString('base64')}`;
     console.log('blob: ', digest);
-    index.blobs[key] = blob;
+    index.blobs[key] = blob.url;
   }
   const json = JSON.stringify(index);
   const json_buffer = Buffer.from(json, 'utf-8');
