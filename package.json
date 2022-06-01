@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "menhera-pkg-gen": "./cli.js"
+    "mpkg-gen": "./cli.js",
+    "mpkg-bundle": "./cli-bundle.js"
   },
   "repository": {
     "type": "git",
